@@ -1,0 +1,5 @@
+com\mycompany\aguardienteantioqueno\GestionarProductos.class
+com\mycompany\aguardienteantioqueno\JAXRSConfiguration.class
+com\mycompany\aguardienteantioqueno\resources\JavaEE8Resource.class
+servlets\SvAgregarProducto.class
+servlets\SvComprar.class
