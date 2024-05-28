@@ -24,7 +24,6 @@
     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#AgregarProductos">
         Añadir Productos
     </button>
-    <a href="agregarProducto.jsp" class="btn btn-success">Añadir Productos</a>
 </div>
 
 <div class="container mt-5">

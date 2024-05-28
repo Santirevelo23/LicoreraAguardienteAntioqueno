@@ -9,10 +9,6 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-/**
- *
- * @author juand
- */
 public class GestionarProductos {
     public static Connection establecerConexion() {
         String url = "jdbc:mysql://localhost:3306/licores?serverTimeZone=utc";
