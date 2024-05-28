@@ -11,9 +11,10 @@ import java.sql.SQLException;
 
 public class GestionarProductos {
     public static Connection establecerConexion() {
-        String url = "jdbc:mysql://localhost:3306/licores?serverTimeZone=utc";
-        String user = "root"; // Nombre de usuario correcto
-        String password = "123456"; // Contraseña de tu base de datos, si la tienes
+         String url = "jdbc:mysql://licoresantioquenomysql.mysql.database.azure.com:3306/tu_base_de_datos?useSSL=true";
+        String user = "licores";
+        String password = "Jhon12345";
+
         Connection conn = null;
 
         try {
@@ -24,6 +25,24 @@ public class GestionarProductos {
             }
         } catch (Exception e) {
             System.out.println("Error de conexion" + e.getMessage());
+        }
+        return conn;
+    }
+    
+    public static Connection establecerConexionAzure() {
+        String url = "jdbc:mysql://licoresantioquenomysql.mysql.database.azure.com";
+        String user = "licores";
+        String password = "Jhon12345"; // Reemplaza con la contraseña real
+        Connection conn = null;
+
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            conn = DriverManager.getConnection(url, user, password);
+            if (conn != null) {
+                System.out.println("Conexion Azure exitosa");
+            }
+        } catch (Exception e) {
+            System.out.println("Error de conexion Azure: " + e.getMessage());
         }
         return conn;
     }
@@ -83,3 +102,4 @@ public class GestionarProductos {
         }
     }
 }
+    
